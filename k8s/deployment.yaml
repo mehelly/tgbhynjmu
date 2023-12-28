@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mentyuhu
+  name: nujitds
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: mentyuhu
+      app: nujitds
   template:
     metadata:
       labels:
-        app: mentyuhu
+        app: nujitds
     spec:
       containers:
-      - image: okteto.dev/mentyuhu:latest
-        name: mentyuhu
+      - image: okteto.dev/nujitds:latest
+        name: nujitds
         ports:
         - containerPort: 8080
         env:
