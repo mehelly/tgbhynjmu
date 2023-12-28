@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: gyuweek
+  name: mentyuhu
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: gyuweek
+      app: mentyuhu
   template:
     metadata:
       labels:
-        app: gyuweek
+        app: mentyuhu
     spec:
       containers:
-      - image: okteto.dev/gyuweek:latest
-        name: gyuweek
+      - image: okteto.dev/mentyuhu:latest
+        name: mentyuhu
         ports:
         - containerPort: 8080
         env:
