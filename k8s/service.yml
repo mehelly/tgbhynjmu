@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: fullre
+  name: gyuweek
   annotations:
     dev.okteto.com/auto-ingress: "true"
 spec:
   type: ClusterIP  
   ports:
-  - name: "fullre"
+  - name: "gyuweek"
     port: 8080
   selector:
-    app: fullre
+    app: gyuweek
