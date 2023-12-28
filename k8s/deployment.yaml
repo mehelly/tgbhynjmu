@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: fullre
+  name: gyuweek
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: fullre
+      app: gyuweek
   template:
     metadata:
       labels:
-        app: fullre
+        app: gyuweek
     spec:
       containers:
-      - image: okteto.dev/fullre:latest
-        name: fullre
+      - image: okteto.dev/gyuweek:latest
+        name: gyuweek
         ports:
         - containerPort: 8080
         env:
