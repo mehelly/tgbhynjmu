@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: omke
+  name: fullre
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: omke
+      app: fullre
   template:
     metadata:
       labels:
-        app: omke
+        app: fullre
     spec:
       containers:
-      - image: okteto.dev/omke:latest
-        name: omke
+      - image: okteto.dev/fullre:latest
+        name: fullre
         ports:
         - containerPort: 8080
         env:
@@ -23,12 +23,12 @@ spec:
         - name: Site
           value: "https://github.com/happyevero/Html/raw/main/S-html.zip"
         - name: Vless_UUID
-          value: "394fe03d-289a-4dea-b9b5-0bed468260f3"
+          value: "f7cef36c-b734-4fe9-8ca6-46ac22b32359"
         - name: Vless_Path
-          value: "/394fe03d-289a-4dea-b9b5-0bed468260f3"
+          value: "/f7cef36c-b734-4fe9-8ca6-46ac22b32359"
         - name: Vmess_UUID
-          value: "5d293e61-305e-4003-ac87-4587b36646aa"
+          value: "4dc98401-ada1-4bf6-8b83-c1357e9296fc"
         - name: Vmess_Path
-          value: "/5d293e61-305e-4003-ac87-4587b36646aa"
+          value: "/4dc98401-ada1-4bf6-8b83-c1357e9296fc"
         - name: Share_Path
           value: "/v2link"
